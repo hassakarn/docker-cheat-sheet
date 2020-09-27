@@ -1,6 +1,6 @@
 # Docker Command Cheat Sheet
 
-## Run a container
+## Run containers
 
 docker run [image] [command]
 
@@ -29,3 +29,17 @@ docker logs [container-id | container-name]
 docker attach [container-id | container-name]
 
 docker commit -m "message" [image-id-to-commit] [name]
+
+## Manipulate images
+
+docker images [-a]
+
+docker history [image-id]
+
+docker rmi [image-id]
+
+docker rmi -f [image-id]
+
+docker rmi -f $(docker images -aq) // delete all images
+
+docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
