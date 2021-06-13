@@ -1,6 +1,6 @@
 # Docker Command Cheat Sheet
 
-## Run containers
+## Run container
 
 docker run [image] [command]
 
